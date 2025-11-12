@@ -1,0 +1,23 @@
+TASK: Create a Go program that performs the following operations:
+
+1. Retrieve all nodes with the "worker" role from the cluster
+
+2. For each worker node found:
+   - Print the node name
+   - Get and print the list of online CPUs on that node
+   - Check if the node is running a PREEMPT RT kernel and print the result
+
+3. Select the first worker node from the list and:
+   - Retrieve the NUMA topology (which CPUs belong to which NUMA nodes)
+   - Print the NUMA topology information
+
+4. Handle errors appropriately with meaningful messages
+
+Expected output format:
+- Clear indication of which node is being examined
+- CPU information in a readable format
+- RT kernel status (yes/no or similar)
+- NUMA topology showing node-to-CPU mappings
+
+Use the cluster-node-tuning-operator test utilities for all cluster interactions.
+
